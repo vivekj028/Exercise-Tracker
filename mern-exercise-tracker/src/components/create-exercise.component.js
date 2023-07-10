@@ -79,7 +79,7 @@ export default class CreateExercise extends Component {
             <div>
                 <h3>Create New Exercise Log</h3>
                 <form onSubmit={this.onSubmit}>
-                    <div className="form-group">
+                    <div className="form-control form-control-lg">
                         <label>Username: </label>
                         <select ref="userInput"
                             required
@@ -97,7 +97,7 @@ export default class CreateExercise extends Component {
                         </select>
                     </div>
                     <br></br>
-                    <div className="form-group">
+                    <div className="form-control form-control-lg">
                         <label>Description: </label>
                         <input type="text"
                             required
@@ -107,7 +107,7 @@ export default class CreateExercise extends Component {
                         />
                     </div>
                     <br></br>
-                    <div className="form-group">
+                    <div className="form-control form-control-lg">
                         <label>Duration (in minutes): </label>
                         <input
                             type="text"
@@ -117,7 +117,7 @@ export default class CreateExercise extends Component {
                         />
                     </div>
                     <br></br>
-                    <div className="form-group">
+                    <div className="form-control form-control-lg">
                         <label>Date: </label>
                         <div>
                             <DatePicker
@@ -127,7 +127,7 @@ export default class CreateExercise extends Component {
                         </div>
                     </div>
                     <br></br>
-                    <div className="form-group">
+                    <div className="form-control form-control-lg">
                         <input type="submit" value="Create Exercise Log" className="btn btn-primary" />
                     </div>
                 </form>
