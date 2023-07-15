@@ -77,9 +77,10 @@ export default class CreateExercise extends Component {
     render() {
         return (
             <div>
+                <br></br><br></br>
                 <h3>Create New Exercise Log</h3>
                 <form onSubmit={this.onSubmit}>
-                    <div className="form-control form-control-lg">
+                    <div className="form-control form-control-lg bg-dark text-white">
                         <label>Username: </label>
                         <select ref="userInput"
                             required
@@ -97,7 +98,7 @@ export default class CreateExercise extends Component {
                         </select>
                     </div>
                     <br></br>
-                    <div className="form-control form-control-lg">
+                    <div className="form-control form-control-lg bg-dark text-white">
                         <label>Description: </label>
                         <input type="text"
                             required
@@ -107,7 +108,7 @@ export default class CreateExercise extends Component {
                         />
                     </div>
                     <br></br>
-                    <div className="form-control form-control-lg">
+                    <div className="form-control form-control-lg bg-dark text-white">
                         <label>Duration (in minutes): </label>
                         <input
                             type="text"
@@ -117,7 +118,7 @@ export default class CreateExercise extends Component {
                         />
                     </div>
                     <br></br>
-                    <div className="form-control form-control-lg">
+                    <div className="form-control form-control-lg bg-dark text-white">
                         <label>Date: </label>
                         <div>
                             <DatePicker
@@ -128,7 +129,7 @@ export default class CreateExercise extends Component {
                     </div>
                     <br></br>
                     <div className="form-control form-control-lg">
-                        <input type="submit" value="Create Exercise Log" className="btn btn-primary" />
+                        <input type="submit" value="Create Exercise Log" className="btn btn-dark" />
                     </div>
                 </form>
             </div>

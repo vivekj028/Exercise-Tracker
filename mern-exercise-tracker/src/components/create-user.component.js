@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { withRouter } from 'react-router-dom';
 
 export default class CreateUser extends Component {
+    
     constructor(props) {
         super(props);
+        
         this.onChangeUsername = this.onChangeUsername.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
         this.state = {
@@ -24,7 +27,10 @@ export default class CreateUser extends Component {
         console.log(newUser);
 
         axios.post('http://localhost:5000/users/add', newUser)
-            .then(res => console.log(res.data));
+            .then(res => {
+                console.log(res.data);
+                this.props.history.push('/create');
+            });
 
         this.setState({
             username: ''
@@ -35,6 +41,7 @@ export default class CreateUser extends Component {
     render() {
         return (
             <div>
+                <br></br><br></br>
                 <h3>Create New User</h3>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
